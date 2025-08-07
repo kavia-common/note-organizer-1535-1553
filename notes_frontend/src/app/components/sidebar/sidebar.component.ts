@@ -9,10 +9,8 @@ import { Router, RouterLink } from '@angular/router';
   styleUrls: ['./sidebar.component.css'],
 })
 export class SidebarComponent {
-  constructor(private router: Router) {}
+  constructor() {}
 
   // PUBLIC_INTERFACE
-  newNote() {
-    this.router.navigate(['/notes/new']);
-  }
+  newNote() {}
 }

@@ -14,38 +14,13 @@ import { Note } from '../../models/note.model';
 export class NoteDetailComponent implements OnInit {
   note: Note | undefined = undefined;
 
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private notesService: NotesService
-  ) {}
+  constructor() {}
 
-  ngOnInit() {
-    this.route.paramMap.subscribe((params) => {
-      const id = params.get('id');
-      if (!id) {
-        this.router.navigate(['/notes']);
-        return;
-      }
-      this.note = this.notesService.getNoteById(id);
-      if (!this.note) {
-        this.router.navigate(['/notes']);
-      }
-    });
-  }
+  ngOnInit() {}
 
-  editNote(note?: Note) {
-    if (!note) return;
-    this.router.navigate(['/notes', note.id, 'edit']);
-  }
+  editNote(note?: Note) {}
 
-  deleteNote(note?: Note) {
-    if (!note || !window.confirm('Delete this note?')) return;
-    this.notesService.deleteNote(note.id);
-    this.router.navigate(['/notes']);
-  }
+  deleteNote(note?: Note) {}
 
-  backToList() {
-    this.router.navigate(['/notes']);
-  }
+  backToList() {}
 }

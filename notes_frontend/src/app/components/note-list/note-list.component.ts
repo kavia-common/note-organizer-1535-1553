@@ -16,25 +16,15 @@ export class NoteListComponent implements OnInit {
   notes: Note[] = [];
   searchValue = '';
 
-  constructor(private notesService: NotesService, private router: Router) {}
+  constructor() {}
 
-  ngOnInit() {
-    this.loadNotes();
-  }
+  ngOnInit() {}
 
-  loadNotes() {
-    this.notes = this.notesService.getNotes(this.searchValue);
-  }
+  loadNotes() {}
 
-  searchNotes() {
-    this.loadNotes();
-  }
+  searchNotes() {}
 
-  selectNote(note: Note) {
-    this.router.navigate(['/notes', note.id]);
-  }
+  selectNote(note: Note) {}
 
-  createNote() {
-    this.router.navigate(['/notes/new']);
-  }
+  createNote() {}
 }
