@@ -1,0 +1,16 @@
+<div class="note-detail-root" *ngIf="note">
+  <span class="back-link" (click)="backToList()">← Notes</span>
+  <div class="note-detail-head">
+    <h2>{{ note.title || 'Untitled' }}</h2>
+    <div class="meta">
+      <span>Last updated: {{ note.updatedAt | date:'short' }}</span>
+    </div>
+  </div>
+  <div class="note-content">
+    {{ note.content }}
+  </div>
+  <div class="note-detail-actions">
+    <button class="edit-btn" (click)="editNote(note)">Edit</button>
+    <button class="delete-btn" (click)="deleteNote(note)">Delete</button>
+  </div>
+</div>

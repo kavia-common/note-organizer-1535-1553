@@ -1,0 +1,61 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+  background: #f6f8fc;
+  padding: 1.8rem 1rem 1rem 1rem;
+  box-sizing: border-box;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #1976d2;
+  margin-bottom: 2.25rem;
+}
+
+.icon {
+  font-size: 2.3rem;
+}
+
+.brand {
+  letter-spacing: 0.05rem;
+  font-family: inherit;
+}
+
+.nav-link {
+  color: #424242;
+  text-decoration: none;
+  padding: 0.6rem 0.2rem;
+  font-size: 1.09rem;
+  margin-bottom: 0.2rem;
+  border-radius: 5px;
+  transition: background .2s, color .2s;
+}
+
+.nav-link.active, .nav-link:hover {
+  background: #e8eef9;
+  color: #1976d2;
+}
+
+.btn-new {
+  margin-top: auto;
+  padding: 0.65em 0.5em;
+  font-size: 1.1rem;
+  border-radius: 0.55em;
+  border: none;
+  background: #1976d2;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 1.5px 6px 0 rgba(25, 118, 210, 0.06);
+  transition: background .2s;
+}
+
+.btn-new:hover {
+  background: #115293;
+}

@@ -1,0 +1,35 @@
+<div class="note-edit-root">
+  <span class="back-link" (click)="cancel()">← Back</span>
+  <h2 *ngIf="isEditMode">Edit Note</h2>
+  <h2 *ngIf="!isEditMode">New Note</h2>
+  <form (ngSubmit)="saveNote()" autocomplete="off">
+    <div class="form-group">
+      <input
+        type="text"
+        placeholder="Title"
+        maxlength="100"
+        [(ngModel)]="note.title"
+        name="title"
+        required
+        class="input-title"
+        autofocus
+      />
+    </div>
+    <div class="form-group">
+      <textarea
+        placeholder="Your note"
+        [(ngModel)]="note.content"
+        name="content"
+        required
+        rows="8"
+        class="input-content"
+      ></textarea>
+    </div>
+    <div class="form-actions">
+      <button type="submit" class="save-btn" [disabled]="!note.title || !note.content">
+        Save
+      </button>
+      <button type="button" class="cancel-btn" (click)="cancel()">Cancel</button>
+    </div>
+  </form>
+</div>
