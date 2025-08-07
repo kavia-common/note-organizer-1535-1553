@@ -1,0 +1,75 @@
+.note-detail-root {
+  margin: 2.5rem auto;
+  background: #fff;
+  max-width: 42rem;
+  border-radius: 20px;
+  padding: 2.5rem 2rem 2rem 2rem;
+  box-shadow: 0 1.5px 10px 0 rgba(25,118,210,0.07);
+  min-height: 40vh;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 0.9em;
+  color: #1976d2;
+  cursor: pointer;
+  font-size: 1.06em;
+  text-decoration: underline transparent;
+  transition: text-decoration .1s;
+}
+.back-link:hover { text-decoration: underline; }
+
+.note-detail-head {
+  margin-bottom: 1.2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.note-detail-head h2 {
+  font-size: 2rem;
+  font-weight: 550;
+  margin-bottom: 0.2em;
+  color: #424242;
+}
+
+.meta {
+  color: #888;
+  font-size: 1em;
+  margin-bottom: 0.7em;
+}
+
+.note-content {
+  font-size: 1.14rem;
+  color: #333;
+  padding: 1.1em 0 1.1em 0;
+  white-space: pre-line;
+  min-height: 8em;
+}
+
+.note-detail-actions {
+  display: flex;
+  gap: 0.6em;
+  margin-top: 1.5em;
+  justify-content: flex-end;
+}
+.edit-btn, .delete-btn {
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1.07em;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.edit-btn {
+  background: #ffb300;
+  color: #fff;
+}
+.edit-btn:hover { background: #ffaa00;}
+.delete-btn {
+  background: #fff0f0;
+  color: #c62828;
+  border: 1px solid #ffcdd2;
+}
+.delete-btn:hover {
+  background: #ffcdd2;
+}
